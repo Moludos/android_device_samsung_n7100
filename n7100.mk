@@ -51,8 +51,7 @@ PRODUCT_PACKAGES += \
 
 # Gps
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml \
-    $(LOCAL_PATH)/gps_daemon.sh:system/bin/gps_daemon.sh
+    $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
 # Product specific Packages
 PRODUCT_PACKAGES += \
@@ -61,8 +60,9 @@ PRODUCT_PACKAGES += \
 
 # RIL & GPS fix
 PRODUCT_PACKAGES += \
-    ril-wrapper \
-    libdmitry
+    libsecril-shim \
+    libdmitry \
+    libshim_gpsd
 
 # Additional apps
 PRODUCT_PACKAGES += \
@@ -81,7 +81,6 @@ PRODUCT_PACKAGES += \
     Tag
 
 PRODUCT_COPY_FILES += \
-    packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
 
@@ -98,8 +97,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Stk
-
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Samsung symbols
 PRODUCT_PACKAGES += \
