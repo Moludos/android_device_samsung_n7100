@@ -66,7 +66,8 @@ PRODUCT_PACKAGES += \
 
 # Additional apps
 PRODUCT_PACKAGES += \
-    OpenDelta
+    OpenDelta \
+    CMSpen
 
 # Sensors
 PRODUCT_PACKAGES += \
