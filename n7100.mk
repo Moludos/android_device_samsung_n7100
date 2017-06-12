@@ -66,9 +66,8 @@ PRODUCT_PACKAGES += \
 
 # Additional apps
 PRODUCT_PACKAGES += \
-    OpenDelta \
-    CMSpen
-
+    OpenDelta
+    
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.smdk4x12

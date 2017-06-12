@@ -42,7 +42,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/n7100/bluetooth
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := Radioactive_defconfig
+TARGET_KERNEL_CONFIG := lineageos_n7100_defconfig
 
 # Power HAL
 TARGET_POWERHAL_VARIANT := samsung
@@ -55,9 +55,6 @@ TARGET_OTA_ASSERT_DEVICE := t03g,n7100,GT-N7100
 
 # External apps on SD
 #TARGET_EXTERNAL_APPS = sdcard1
-
-# Enable root
-WITH_SU := true
 
 # Camera Hacks
 BOARD_GLOBAL_CFLAGS += -DMETADATA_CAMERA_SOURCE
@@ -78,4 +75,4 @@ RECOVERY_FSTAB_VERSION := 2
 
 # Selinux
 BOARD_SEPOLICY_DIRS += \
-device/samsung/n7100/selinux
+    device/samsung/n7100/selinux
