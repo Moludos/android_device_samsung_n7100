@@ -19,15 +19,12 @@
 
 -include device/samsung/smdk4412-common/BoardCommonConfig.mk
 
-# Bionic
-MALLOC_IMPL := dlmalloc
-
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6262
 BOARD_RIL_CLASS := ../../../hardware/samsung/ril
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/n7100/include
-COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
+BOARD_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # Graphics
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true

@@ -45,10 +45,6 @@ PRODUCT_PACKAGES += \
     fsck.f2fs \
     mkfs.f2fs
 
-# Busybox
-PRODUCT_PACKAGES += \
-    busybox
-
 # Gps
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml \
@@ -64,10 +60,6 @@ PRODUCT_PACKAGES += \
     ril-wrapper \
     libdmitry
 
-# Additional apps
-PRODUCT_PACKAGES += \
-    OpenDelta
-
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.smdk4x12
@@ -81,7 +73,6 @@ PRODUCT_PACKAGES += \
     Tag
 
 PRODUCT_COPY_FILES += \
-    packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
 
@@ -98,8 +89,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Stk
-
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Samsung symbols
 PRODUCT_PACKAGES += \
